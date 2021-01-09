@@ -1,0 +1,117 @@
+mixin hero(data)
+    section.hero&attributes(attributes)
+        .hero__slider.swiper-container
+            .swiper-wrapper
+                .hero__slide.swiper-slide
+                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-img-1.jpg", alt="")
+                    .swiper-lazy-preloader.swiper-lazy-preloader-white
+                .hero__slide.swiper-slide
+                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-thumb-2.jpg", alt="")
+                    .swiper-lazy-preloader.swiper-lazy-preloader-white
+                .hero__slide.swiper-slide
+                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-thumb-3.jpg", alt="")
+                    .swiper-lazy-preloader.swiper-lazy-preloader-white
+                .hero__slide.swiper-slide
+                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-img-1.jpg", alt="")
+                    .swiper-lazy-preloader.swiper-lazy-preloader-white
+                .hero__slide.swiper-slide
+                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-thumb-2.jpg", alt="")
+                    .swiper-lazy-preloader.swiper-lazy-preloader-white
+                .hero__slide.swiper-slide
+                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-thumb-3.jpg", alt="")
+                    .swiper-lazy-preloader.swiper-lazy-preloader-white
+                .hero__slide.swiper-slide
+                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-thumb-3.jpg", alt="")
+                    .swiper-lazy-preloader.swiper-lazy-preloader-white
+                .hero__slide.swiper-slide
+                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-img-1.jpg", alt="")
+                    .swiper-lazy-preloader.swiper-lazy-preloader-white
+                .hero__slide.swiper-slide
+                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-thumb-2.jpg", alt="")
+                    .swiper-lazy-preloader.swiper-lazy-preloader-white
+                .hero__slide.swiper-slide
+                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-thumb-3.jpg", alt="")
+                    .swiper-lazy-preloader.swiper-lazy-preloader-white
+
+
+        .hero__w
+            .hero__container.container
+                .hero__content
+                    h1.hero__title Ski Muse
+                    .hero__text
+                        p Far, far beyond the mountains of words, fish texts live in the land of vowels and consonants.
+
+                    a.hero__call-to-action.open-popup.button(href="#") Search ski resorts
+
+
+        .hero__thumbs-w
+
+            .hero__thumbs.swiper-container
+                .swiper-wrapper
+                    .hero__thumb.swiper-slide
+                        a.hero__thumb-w(href="")
+                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-1.jpg", alt="")
+                            span.hero__thumb-title Mayrhofen
+                            .swiper-lazy-preloader.swiper-lazy-preloader-white
+                    .hero__thumb.swiper-slide
+                        a.hero__thumb-w(href="")
+                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-2.jpg", alt="")
+                            span.hero__thumb-title St. Anton am Arlberg
+                            .swiper-lazy-preloader.swiper-lazy-preloader-white
+                    .hero__thumb.swiper-slide
+                        a.hero__thumb-w(href="")
+                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-3.jpg", alt="")
+                            span.hero__thumb-title Mayrhofen
+                            .swiper-lazy-preloader.swiper-lazy-preloader-white
+                    .hero__thumb.swiper-slide
+                        a.hero__thumb-w(href="")
+                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-1.jpg", alt="")
+                            span.hero__thumb-title St. Anton am Arlberg
+                            .swiper-lazy-preloader.swiper-lazy-preloader-white
+                    .hero__thumb.swiper-slide
+                        a.hero__thumb-w(href="")
+                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-2.jpg", alt="")
+                            span.hero__thumb-title Mayrhofen
+                            .swiper-lazy-preloader.swiper-lazy-preloader-white
+                    .hero__thumb.swiper-slide
+                        a.hero__thumb-w(href="")
+                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-3.jpg", alt="")
+                            span.hero__thumb-title St. Anton am Arlberg
+                            .swiper-lazy-preloader.swiper-lazy-preloader-white
+
+                    .hero__thumb.swiper-slide
+                        a.hero__thumb-w(href="")
+                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-3.jpg", alt="")
+                            span.hero__thumb-title Mayrhofen
+                            .swiper-lazy-preloader.swiper-lazy-preloader-white
+                    .hero__thumb.swiper-slide
+                        a.hero__thumb-w(href="")
+                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-1.jpg", alt="")
+                            span.hero__thumb-title St. Anton am Arlberg
+                            .swiper-lazy-preloader.swiper-lazy-preloader-white
+                    .hero__thumb.swiper-slide
+                        a.hero__thumb-w(href="")
+                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-2.jpg", alt="")
+                            span.hero__thumb-title Mayrhofen
+                            .swiper-lazy-preloader.swiper-lazy-preloader-white
+                    .hero__thumb.swiper-slide
+                        a.hero__thumb-w(href="")
+                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-3.jpg", alt="")
+                            span.hero__thumb-title St. Anton am Arlberg
+                            .swiper-lazy-preloader.swiper-lazy-preloader-white
+
+
+
+            .hero__controls.flex
+                .hero__buttons.flex
+                    button.hero__button.hero__button_prev
+                        != pugHelpers.Icon.call(locals, {iconName: 'arrow-hero', className: 'hero__button-icon'})
+
+                    button.hero__button.hero__button_next
+                        != pugHelpers.Icon.call(locals, {iconName: 'arrow-hero', className: 'hero__button-icon'})
+
+                .hero__scrollbar
+
+                .hero__counter
+
+

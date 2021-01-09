@@ -1,0 +1,72 @@
+{
+  "active": true,
+  "type": "cpt",
+  "name": "Ski-resorts",
+  "supports": [
+    "title",
+    "editor",
+    "comments",
+    "revisions",
+    "author",
+    "excerpt",
+    "page-attributes",
+    "thumbnail",
+    "custom-fields",
+    "post-formats"
+  ],
+  "labels": {
+    "has_one": "Ski resort",
+    "has_many": "Ski resorts",
+    "text_domain": "sage",
+    "overrides": {
+      "name": "Ski resorts",
+      "singular_name": "Ski resort",
+      "menu_name": "Ski resorts",
+      "name_admin_bar": "Ski resorts",
+      "add_new": "Add Ski resort",
+      "add_new_item": "Add New Ski resort",
+      "edit_item": "Edit Ski resort",
+      "new_item": "New Ski resort",
+      "view_item": "View Ski resort",
+      "view_items": "View Ski resorts",
+      "search_items": "Search Ski resorts",
+      "not_found": "No found Ski resorts.",
+      "not_found_in_trash": "Ski resorts No found in Trash.",
+      "parent_item-colon": "Parent Ski resorts:",
+      "all_items": "All Ski resorts",
+      "archives": "Ski resorts",
+      "attributes": "Ski resorts Attributes",
+      "insert_into_item": "Insert into Ski resorts",
+      "uploaded_to_this_item": "Uploaded to this Ski resorts",
+      "featured_image": "Featured Image",
+      "set_featured_image": "Set featured image",
+      "remove_featured_image": "Remove featured image",
+      "use_featured_image": "Use featured image",
+      "filter_items_list": "Filter Ski resorts list",
+      "items_list_navigation": "Ski resorts list navigation",
+      "items_list": "Ski resorts list"
+    }
+  },
+  "config": {
+    "public": true,
+    "publicly_queryable": true,
+    "show_ui": true,
+    "show_in_menu": true,
+    "show_in_rest": true,
+    "query_var": true,
+    "has_archive": true,
+    "hierarchical": true,
+    "menu_position": null,
+    "can_export": true,
+    "capability_type": "post",
+    "taxonomies": [
+      "ski-resorts"
+    ],
+    "rewrite": {
+      "slug": "ski-resorts",
+      "with_front": true,
+      "feeds": true,
+      "pages": true
+    }
+  }
+}

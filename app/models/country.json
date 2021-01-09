@@ -1,0 +1,61 @@
+{
+  "active": true,
+  "type": "tax",
+  "name": "country",
+  "links": [
+    "ski-resorts", "examples"
+  ],
+  "labels": {
+    "has_one": "Country",
+    "has_many": "Countries",
+    "text_domain": "sage",
+    "overrides": {
+      "name": "Countries",
+      "singular_name": "Country",
+      "search_items": "Search Countries",
+      "popular_items": "Popular Countries",
+      "all_items": "All Countries",
+      "parent_item": "Parent Countries",
+      "parent_item_colon": "Parent Country:",
+      "edit_item": "Edit Country",
+      "view_item": "View Country",
+      "update_item": "Обновить Country",
+      "add_new_item": "Добавить New Country",
+      "new_item_name": "New Country",
+      "separate_items_with_commas": "Separate Country with commas",
+      "add_or_remove_items": "Add or remove Country",
+      "choose_from_most_used": "Choose from the most used Country",
+      "not_found": "No Country found.",
+      "no_terms": "No Country",
+      "items_list_navigation": "Country list navigation",
+      "items_list": "Country list"
+    }
+  },
+  "config": {
+    "public": true,
+    "publicly_queryable": true,
+    "query_var": true,
+    "show_ui": true,
+    "show_in_menu": true,
+    "show_in_nav_menus": true,
+    "show_in_rest": true,
+    "rest_base": "country",
+    "rest_controller_class": "WP_REST_Terms_Controller",
+    "show_tagcloud": true,
+    "show_in_quick_edit": true,
+    "show_admin_column": false,
+    "show_in_graphql": true,
+    "graphql_single_name": "country",
+    "graphql_plural_name": "countries",
+    "capabilities": {
+      "manage_terms": "manage_categories",
+      "edit_terms": "manage_categories",
+      "delete_terms": "manage_categories",
+      "assign_terms": "edit_posts"
+    },
+    "rewrite": {
+      "slug": "country",
+      "hierarchical": false
+    }
+  }
+}

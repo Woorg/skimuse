@@ -1,0 +1,8 @@
+include ../content/content.pug
+include ../sidebar/sidebar.pug
+
+mixin contacts(data)
+    .contacts&attributes(attributes)
+        .contacts__container.container.flex
+            +content-contacts().contacts__content
+            +sidebar-contacts().contacts__sidebar

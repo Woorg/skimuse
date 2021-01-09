@@ -1,0 +1,31 @@
+include ../nav-trigger/nav-trigger.pug
+include ../nav/nav.pug
+
+mixin header(data)
+    header.header&attributes(attributes)
+        .header__container.container.flex
+
+            a.header__logo.logo(href="#")
+
+                span.logo__word.logo__word_first Ski
+                span.logo__word.logo__word_second Muse
+
+            +nav-trigger().header__nav-trigger
+
+            +nav().header__nav
+
+
+mixin header-resort(data)
+    header.header&attributes(attributes)
+        .header__container.container.flex
+
+            a.header__logo.logo(href="#")
+
+                span.logo__word.logo__word_first Ski
+                span.logo__word.logo__word_second Muse
+
+            .header__title Weekend in the best resort of the Carpathians
+
+            +nav-trigger().header__nav-trigger
+
+            +nav().header__nav
