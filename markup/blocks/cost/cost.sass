@@ -1,0 +1,56 @@
+.cost
+    display: inline-flex
+    // flex-direction: row-reverse
+    &__star
+        +resetbutton()
+        position: relative
+        display: inline
+        margin-right: 8px
+        width: 18px
+        height: 18px
+        // appearance: none
+        text-indent: -9999px
+        // cursor: pointer
+        transition: height 0.2s
+        &:after
+            position: absolute
+            width: 100%
+            height: 100%
+            // content: attr(value)
+            content: ''
+            display: flex
+            justify-content: center
+            align-items: center
+            // color: white
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            // font-size: 0.8rem
+
+        &:before
+            content: ' '
+            width: 100%
+            height: 100%
+            display: flex
+            background-image: url('../images/general/baks-icon.svg')
+            // background: red
+            background-size: cover
+            // border-radius: 4px
+            transition: .2s
+
+        &.checked
+            background: url('../images/general/baks-on-icon.svg') 50% no-repeat
+            background-size: cover
+
+
+
+    &:hover
+        .cost__star
+            // color: #aaa
+            opacity: 1
+
+            &:hover,
+            &:hover ~ .cost__star
+                background: url('../images/general/baks-on-icon.svg') 50% no-repeat
+                background-size: cover
+                opacity: 1

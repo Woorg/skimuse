@@ -1,0 +1,47 @@
+mixin blog-slider(data)
+    section.blog-slider
+        .blog-slider__container.container
+            .blog-slider__top.flex
+                h2.blog-slider__title.title Blog
+                .blog-slider__buttons.flex
+                    button.blog-slider__button.blog-slider__button_prev
+                        != pugHelpers.Icon.call(locals, {iconName: 'arrow-slider', className: 'blog-slider__button-icon'})
+                    button.blog-slider__button.blog-slider__button_next
+                        != pugHelpers.Icon.call(locals, {iconName: 'arrow-slider', className: 'blog-slider__button-icon'})
+
+            .blog-slider__slider.swiper-container
+                .swiper-wrapper
+                    .blog-slider__slide.swiper-slide
+                        a.blog-slider__link(href="#")
+                            img.blog-slider__image.swiper-lazy(data-src="assets/images/content/blog-img-1.jpg", alt="")
+                            .blog-slider__name Spending 1 week in courchevel
+                                != pugHelpers.Icon.call(locals, {iconName: 'ext-link-arrow', className: 'blog-slider__name-icon'})
+                            .blog-slider__text Far, far beyond the mountains of words, fish texts live in the land of vowels and consonants.
+                            .blog-slider__date 20 nov 2020
+
+                    .blog-slider__slide.swiper-slide
+                        a.blog-slider__link(href="#")
+                            img.blog-slider__image.swiper-lazy(data-src="assets/images/content/blog-img-1.jpg", alt="")
+                            .blog-slider__name Spending 1 week in courchevel
+                                != pugHelpers.Icon.call(locals, {iconName: 'ext-link-arrow', className: 'blog-slider__name-icon'})
+                            .blog-slider__text Far, far beyond the mountains of words, fish texts live in the land of vowels and consonants.
+                            .blog-slider__date 20 nov 2020
+
+                    .blog-slider__slide.swiper-slide
+                        a.blog-slider__link(href="#")
+                            img.blog-slider__image.swiper-lazy(data-src="assets/images/content/blog-img-1.jpg", alt="")
+                            .blog-slider__name Spending 1 week in courchevel
+                                != pugHelpers.Icon.call(locals, {iconName: 'ext-link-arrow', className: 'blog-slider__name-icon'})
+                            .blog-slider__text Far, far beyond the mountains of words, fish texts live in the land of vowels and consonants.
+                            .blog-slider__date 20 nov 2020
+
+                    .blog-slider__slide.swiper-slide
+                        a.blog-slider__link(href="#")
+                            img.blog-slider__image.swiper-lazy(data-src="assets/images/content/blog-img-1.jpg", alt="")
+                            .blog-slider__name Choosing a ski school for a child
+                                != pugHelpers.Icon.call(locals, {iconName: 'ext-link-arrow', className: 'blog-slider__name-icon'})
+                            .blog-slider__text his paradigmatic country in which the sentence fried fly directly into the mouth.
+                            .blog-slider__date 20 nov 2020
+
+                .blog-slider__controls.flex
+                    .blog-slider__scrollbar

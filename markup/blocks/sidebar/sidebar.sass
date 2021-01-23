@@ -1,0 +1,147 @@
+.sidebar
+    width: 100%
+    +mq($small)
+        padding-right: 70px
+        max-width: 33.3%
+    &__slider
+        position: relative
+        // width: 302px
+    &__slide
+        height: 208px
+    &__image
+        position: relative
+        width: 100%
+        height: 100%
+        display: block
+        &:after
+            position: absolute
+            top: 0
+            right: 0
+            left: 0
+            width: 100%
+            height: 100%
+            content: ''
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.54) 100%, rgba(0, 0, 0, 0.62) 100%)
+
+        img
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: 50%
+
+    &__dots
+        position: absolute
+        z-index: 1
+        bottom: 16px
+        right: 0
+        left: 0
+        width: 100%
+        text-align: center
+
+    .swiper-pagination-bullet
+        border: 2px solid #f8f8fa
+        width: 12px
+        height: 12px
+        background: transparent
+        opacity: 1
+        border-radius: 50%
+
+    .swiper-pagination-bullet-active
+        background: #FFF
+
+    &__block
+        margin-bottom: 20px
+        +mq($small)
+            margin-bottom: 30px
+
+    &__block_ski-pass
+        .sidebar__list
+            flex-wrap: wrap
+        .sidebar__item
+            padding-left: 0
+            margin-bottom: 15px
+            max-width: 50%
+            width: 100%
+            font-size: 16px
+            font-weight: 700
+            letter-spacing: -0.32px
+            +mq($small)
+                max-width: 100%
+        .sidebar__item-term
+            color: #6a7bff
+            font-weight: 700
+        .sidebar__item-desc
+            padding-left: 4px
+            font-weight: normal
+
+    &__block_recent
+        //position: sticky
+        .sidebar__item
+            border-bottom: 1px solid rgba(46,58,89, .5)
+            margin-bottom: 15px
+            padding-left: 0
+            &:last-child
+                border-bottom: none
+
+        .sidebar__item-link
+            position: relative
+            // padding-top: 15px
+            padding-right: 15px
+            padding-bottom: 15px
+            padding-left: 38px
+            align-items: center
+            text-decoration: none
+            color: #1f1f1f
+            font-size: 14px
+            font-weight: 400
+            letter-spacing: -0.28px
+            line-height: 1.333
+
+        .sidebar__item-icon
+            top: 2px
+            transform: translateY(0)
+        .sidebar__block-title
+            margin-bottom: 17px
+
+    &__block_slider
+        +mq($small)
+            max-width: 300px
+
+    &__block_social
+        margin-top: 50px
+
+
+    &__block-title
+        margin-bottom: 25px
+        color: #1f1f1f
+        font-size: 24px
+        font-weight: 700
+        letter-spacing: -0.48px
+        line-height: 1.333
+
+    &__item
+        position: relative
+        margin-bottom: 25px
+        padding-left: 38px
+        align-items: center
+
+    &__item-icon
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+
+    &__item-term
+        color: #1f1f1f
+        font-size: 16px
+        font-weight: 400
+        letter-spacing: -0.32px
+
+    &__item-desc
+        padding-left: 10px
+        font-size: 16px
+        font-weight: 500
+        letter-spacing: -0.32px
+        line-height: 1
+

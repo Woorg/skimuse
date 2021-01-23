@@ -1,0 +1,33 @@
+.pagination
+  margin-top: 20px
+
+  .screen-reader-text
+    +visuallyhidden
+
+  .nav-links
+    display: flex
+
+  .page-numbers
+    margin-right: 5px
+    margin-left: 5px
+    color: #1f1f1f
+    font-size: 22px
+    font-weight: 500
+    letter-spacing: -0.44px
+    line-height: normal
+    text-decoration: none
+    +tr(.3s linear)
+
+    &.next
+      padding-left: 10px
+
+    &.prev
+      padding-right: 10px
+
+
+    &:hover,
+    &.current
+      color: #6a7bff
+      +tr(.3s linear)
+
+

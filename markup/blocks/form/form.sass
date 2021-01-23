@@ -1,0 +1,101 @@
+.form
+
+  &__row
+    flex-wrap: wrap
+    +mq($small)
+      flex-wrap: nowrap
+
+  &__field
+    margin-bottom: 22px
+    width: 100%
+    display: flex
+
+    .wpcf7-form-control-wrap
+      //width: 100%
+      flex-grow: 1
+
+  &__field_input
+    +mq($small)
+      margin-right: 30px
+    &:last-child
+      margin-right: 0
+
+  //&__field_message
+  //  .form__label-text
+  //  height: 24px
+
+  &__label
+    position: relative
+    display: block
+    width: 100%
+
+    &:focus,
+    &:focus-within
+      .form__label-text
+        transform: translateY(-100%)
+        +tr(.1s linear)
+
+
+  &__label-text
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    color: rgba(31, 31, 31, .5)
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: -0.28px
+    line-height: 24px
+    +tr(.1s linear)
+
+  &__input,
+  &__message
+    +resetbutton()
+    width: 100%
+    height: 24px
+    color: rgba(31, 31, 31, .5)
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: -0.28px
+    line-height: 24px
+    border-bottom: 2px solid #6a7bff
+    +placeholder()
+      color: rgba(31, 31, 31, .5)
+      font-size: 14px
+      font-weight: 400
+      letter-spacing: -0.28px
+      line-height: 24px
+
+
+  &__message
+    padding-top: 14px
+    padding-bottom: 17px
+    min-height: 100px
+  // line-height: 1.56
+
+  &__submit
+    margin-top: 10px
+    padding-right: 80px
+    padding-left: 80px
+    flex-grow: 1
+    text-align: center
+
+.wpcf7
+  form.invalid,
+  form.failed,
+  form.sent
+    .wpcf7-response-output
+      border: none
+      background: darken(#E51515, 10)
+      // background: #ffb900
+      color: #fff
+      //border-radius: 8px
+
+  form.sent
+    .wpcf7-response-output
+      border: none
+      background: #46b450
+
+  .wpcf7-not-valid-tip
+    font-size: 12px

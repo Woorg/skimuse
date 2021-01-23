@@ -1,0 +1,133 @@
+include ../breadcrumbs/breadcrumbs.pug
+include ../content/content.pug
+include ../sidebar/sidebar.pug
+
+mixin resort(data)
+    .resort&attributes(attributes)
+        .resort__top
+            .resort__image
+                img(src="assets/images/content/resort-full-img.jpg", alt="")
+
+            .resort__specs
+                .resort__container.container.flex
+                    .resort__specs-item.resort__specs-item_info
+                        .resort__specs-title Information
+
+                        .resort__stars.rating
+                            .rating__star.checked(type='radio' name='rating' value='5')
+                            .rating__star.checked(type='radio' name='rating' value='4')
+                            .rating__star.checked(type='radio' name='rating' value='3')
+                            .rating__star(type='radio' name='rating' value='2')
+                            .rating__star(type='radio' name='rating' value='1')
+
+
+                        .resort__cost.cost
+                            .cost__star.checked(type='radio' name='cost' value='5')
+                            .cost__star.checked(type='radio' name='cost' value='4')
+                            .cost__star(type='radio' name='cost' value='3')
+                            .cost__star(type='radio' name='cost' value='2')
+                            .cost__star(type='radio' name='cost' value='1')
+
+                        .resort__status.status
+                            .status__text.status__text_active Open
+                            .status__sep /
+                            .status__text Closed
+
+                    .resort__specs-item.resort__specs-item_weather
+                        .resort__specs-title Current weather
+
+                        .resort__weather.flex
+                            .resort__weather-row.flex
+                                != pugHelpers.Icon.call(locals, {iconName: 'weather-icon', className: 'resort__weather-icon'})
+                                .resort__weather-now 19°F
+
+                            .resort__weather-row.flex
+                                .resort__weather-col
+                                    span.resort__weather-middle High:
+                                    span.resort__weather-val 27°F
+                                .resort__weather-col
+                                    span.resort__weather-middle Low:
+                                    span.resort__weather-val 8°F
+
+                    .resort__specs-item.resort__specs-item_lift
+                        .resort__specs-title Lift status
+                        .resort__lift.flex
+                            != pugHelpers.Icon.call(locals, {iconName: 'lift-icon', className: 'resort__lift-icon'})
+                            .resort__lift-text 48/48 - Open
+
+                    .resort__specs-item.resort__specs-item_area
+                        .resort__specs-title Skiable area
+                        .resort__area.flex
+                            != pugHelpers.Icon.call(locals, {iconName: 'area-icon', className: 'resort__area-icon'})
+                            .resort__area-text 600 km
+
+                    .resort__specs-item.resort__specs-item_pistes
+                        .resort__specs-title Pistes
+                        .resort__pistes.flex
+                            .resort__pistes-item 1 km
+                            .resort__pistes-item 34 km
+                            .resort__pistes-item 74 km
+                            .resort__pistes-item 150 km
+
+            .resort__know
+                .resort__container.container.flex
+
+                    .resort__know-title Best know for:
+                    ul.resort__know-list.flex
+
+                        li.resort__know-item
+                            != pugHelpers.Icon.call(locals, {iconName: 'expert-icon', className: 'resort__know-icon'})
+                            .resort__know-text expert
+
+                        li.resort__know-item
+                            != pugHelpers.Icon.call(locals, {iconName: 'beginner-friendly-icon', className: 'resort__know-icon'})
+                            .resort__know-text beginner-friendly
+
+                        li.resort__know-item
+                            != pugHelpers.Icon.call(locals, {iconName: 'powder-icon', className: 'resort__know-icon'})
+                            .resort__know-text powder
+
+                        li.resort__know-item
+                            != pugHelpers.Icon.call(locals, {iconName: 'freeride-icon', className: 'resort__know-icon'})
+                            .resort__know-text freeride
+
+                        li.resort__know-item
+                            != pugHelpers.Icon.call(locals, {iconName: 'slalom-icon', className: 'resort__know-icon'})
+                            .resort__know-text slalom
+
+                        li.resort__know-item
+                            != pugHelpers.Icon.call(locals, {iconName: 'race-icon', className: 'resort__know-icon'})
+                            .resort__know-text race
+
+                        li.resort__know-item
+                            != pugHelpers.Icon.call(locals, {iconName: 'budget-icon', className: 'resort__know-icon'})
+                            .resort__know-text budget
+
+                        li.resort__know-item
+                            != pugHelpers.Icon.call(locals, {iconName: 'luxury-icon', className: 'resort__know-icon'})
+                            .resort__know-text luxury
+
+                        li.resort__know-item
+                            != pugHelpers.Icon.call(locals, {iconName: 'family-oriented-icon', className: 'resort__know-icon'})
+                            .resort__know-text family-oriented
+
+                        li.resort__know-item
+                            != pugHelpers.Icon.call(locals, {iconName: 'youth-icon', className: 'resort__know-icon'})
+                            .resort__know-text youth
+
+                        li.resort__know-item
+                            != pugHelpers.Icon.call(locals, {iconName: 'spa-icon', className: 'resort__know-icon'})
+                            .resort__know-text spa
+
+                        li.resort__know-item
+                            != pugHelpers.Icon.call(locals, {iconName: 'nightlife-icon', className: 'resort__know-icon'})
+                            .resort__know-text nightlife
+
+                        li.resort__know-item
+                            != pugHelpers.Icon.call(locals, {iconName: 'skipark-icon', className: 'resort__know-icon'})
+                            .resort__know-text skipark
+
+        .resort__row.container.flex
+
+            +content().resort__content
+            +sidebar().resort__sidebar

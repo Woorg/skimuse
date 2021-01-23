@@ -1,0 +1,28 @@
+mixin resort-slider(data)
+    section.resort-slider&attributes(attributes)
+        .resort-slider__container.container
+            .resort-slider__top.flex
+                h2.resort-slider__title.title Ultimate Features - Stories from the snow
+                .resort-slider__buttons.flex
+                    button.resort-slider__button.resort-slider__button_prev
+                        != pugHelpers.Icon.call(locals, {iconName: 'arrow-slider', className: 'resort-slider__button-icon'})
+                    button.resort-slider__button.resort-slider__button_next
+                        != pugHelpers.Icon.call(locals, {iconName: 'arrow-slider', className: 'resort-slider__button-icon'})
+
+            .resort-slider__slider.swiper-container
+                .swiper-wrapper
+                    .resort-slider__slide.swiper-slide
+                        a.resort-slider__link(href="#")
+                            img.resort-slider__image.swiper-lazy(data-src="assets/images/content/resort-img-1.jpg", alt="")
+                            span.resort-slider__name Mayrhofen
+                    .resort-slider__slide.swiper-slide
+                        a.resort-slider__link(href="#")
+                            img.resort-slider__image.swiper-lazy(data-src="assets/images/content/resort-img-2.jpg", alt="")
+                            span.resort-slider__name St. Anton am Arlberg
+                    .resort-slider__slide.swiper-slide
+                        a.resort-slider__link(href="#")
+                            img.resort-slider__image.swiper-lazy(data-src="assets/images/content/resort-img-3.jpg", alt="")
+                            span.resort-slider__name Val d’Isere
+
+
+            button.resort-slider__more.button.button_invert Show more

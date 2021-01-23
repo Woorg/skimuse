@@ -1,0 +1,10 @@
+include ../social/social.pug
+
+mixin footer(data)
+    footer.footer&attributes(attributes)
+        .footer__container.container.flex
+            a.footer__logo.logo.logo_second(href="#")
+                span.logo__word.logo__word_first Ski
+                span.logo__word.logo__word_second Muse
+
+            +social().footer__social

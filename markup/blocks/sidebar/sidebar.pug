@@ -1,0 +1,135 @@
+mixin sidebar(data)
+    aside.sidebar&attributes(attributes)
+        .sidebar__block.sidebar__block_slider
+            .sidebar__slider.swiper-container
+                .swiper-wrapper
+                    .sidebar__slide.swiper-slide
+                        a.sidebar__image(href="assets/images/content/side-slider.jpg")
+                            img.swiper-lazy(data-src="assets/images/content/side-slider.jpg", alt="")
+                        .swiper-lazy-preloader.swiper-lazy-preloader-white
+                    .sidebar__slide.swiper-slide
+                        a.sidebar__image(href="assets/images/content/side-slider.jpg")
+                            img.swiper-lazy(data-src="assets/images/content/side-slider.jpg", alt="")
+                        .swiper-lazy-preloader.swiper-lazy-preloader-white
+                    .sidebar__slide.swiper-slide
+                        a.sidebar__image(href="assets/images/content/side-slider.jpg")
+                            img.swiper-lazy(data-src="assets/images/content/side-slider.jpg", alt="")
+                        .swiper-lazy-preloader.swiper-lazy-preloader-white
+
+                .sidebar__dots
+
+        .sidebar__block
+            h3.sidebar__block-title Altitude
+
+            dl.sidebar__list
+                .sidebar__item.flex
+                    != pugHelpers.Icon.call(locals, {iconName: 'altitude-icon', className: 'sidebar__item-icon'})
+
+                    dd.sidebar__item-desc 1600 - 3200 m
+
+
+        .sidebar__block
+            h3.sidebar__block-title How to get there
+
+            dl.sidebar__list
+                .sidebar__item.flex
+                    != pugHelpers.Icon.call(locals, {iconName: 'get-1', className: 'sidebar__item-icon'})
+                    dd.sidebar__item-term Frankfurt:
+                    dd.sidebar__item-desc 60 km
+                .sidebar__item.flex
+                    != pugHelpers.Icon.call(locals, {iconName: 'get-2', className: 'sidebar__item-icon'})
+                    dd.sidebar__item-term Warshava:
+                    dd.sidebar__item-desc 100 km
+                .sidebar__item.flex
+                    != pugHelpers.Icon.call(locals, {iconName: 'get-3', className: 'sidebar__item-icon'})
+                    dd.sidebar__item-term Geneva:
+                    dd.sidebar__item-desc 120 km
+
+        .sidebar__block.sidebar__block_ski-pass
+            h3.sidebar__block-title Ski-pass
+
+            dl.sidebar__list.flex
+                .sidebar__item.flex
+                    dd.sidebar__item-term 1 day:
+                    dd.sidebar__item-desc $50
+                .sidebar__item.flex
+                    dd.sidebar__item-term 2 day:
+                    dd.sidebar__item-desc $90
+                .sidebar__item.flex
+                    dd.sidebar__item-term 6 day:
+                    dd.sidebar__item-desc $150
+
+                .sidebar__item.flex
+                    dd.sidebar__item-term 10 day:
+                    dd.sidebar__item-desc $200
+
+
+
+mixin sidebar-article(data)
+    aside.sidebar&attributes(attributes)
+
+        .sidebar__block.sidebar__block_recent
+            h3.sidebar__block-title Recent Posts
+
+            ul.sidebar__list
+                li.sidebar__item
+                    a.sidebar__item-link.flex(href="#")
+                        != pugHelpers.Icon.call(locals, {iconName: 'recent-posts-icon', className: 'sidebar__item-icon'})
+                        .sidebar__item-title French and Andorran ski resorts close due to covid-19 Coronavirus
+
+                li.sidebar__item
+                    a.sidebar__item-link.flex(href="#")
+                        != pugHelpers.Icon.call(locals, {iconName: 'recent-posts-icon', className: 'sidebar__item-icon'})
+                        .sidebar__item-title Leading US and Canadian Ski Resorts suspend operations due to Coronavirus (covid-19)
+
+                li.sidebar__item
+                    a.sidebar__item-link.flex(href="#")
+                        != pugHelpers.Icon.call(locals, {iconName: 'recent-posts-icon', className: 'sidebar__item-icon'})
+                        .sidebar__item-title Coronavirus response from Booking.com
+
+
+mixin sidebar-contacts(data)
+    aside.sidebar&attributes(attributes)
+
+        .sidebar__block.sidebar__block_social
+            h3.sidebar__block-title Our social networks
+
+            ul.sidebar__social.social.social_side
+                li.social__item
+                    a.social__link.flex(href="mailto:skimuse@gmail.com")
+                        .social__icon-w
+                            != pugHelpers.Icon.call(locals, {iconName: 'email-icon', className: 'social__icon'})
+
+                        | SkiMuse@gmail.com
+
+                li.social__item
+                    a.social__link.flex(href="#")
+                        .social__icon-w
+                            != pugHelpers.Icon.call(locals, {iconName: 'instagram-icon', className: 'social__icon'})
+
+                        | SkiMuse instagram
+
+                li.social__item
+                    a.social__link.flex(href="#")
+                        .social__icon-w
+                            != pugHelpers.Icon.call(locals, {iconName: 'facebook-icon', className: 'social__icon'})
+                        | SkiMuse facebook
+
+
+                li.social__item
+                    a.social__link.flex(href="#")
+                        .social__icon-w
+                            != pugHelpers.Icon.call(locals, {iconName: 'telegram-icon', className: 'social__icon'})
+
+                        | SkiMuse telegram
+
+
+                li.social__item
+                    a.social__link.flex(href="#")
+                        .social__icon-w
+                            != pugHelpers.Icon.call(locals, {iconName: 'youtube-icon', className: 'social__icon'})
+
+                        | SkiMuse youtube
+
+
+

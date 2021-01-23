@@ -1,0 +1,303 @@
+.resort
+    &__top
+        display: flex
+        flex-direction: column
+    &__image
+        height: 370px
+        overflow: hidden
+        img
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: 50%
+
+    &__specs
+        display: flex
+        flex-wrap: wrap
+        order: 1
+        +mq($small)
+            order: 0
+        .resort__container
+            flex-wrap: wrap
+            +mq($small)
+                flex-wrap: nowrap
+
+    &__specs-item
+        position: relative
+        padding-top: 22px
+        padding-bottom: 40px
+        // min-width: 220px
+        width: 100%
+        +mq($small)
+            padding-right: 32px
+            padding-left: 32px
+            max-width: 20%
+            // min-width: 232px
+
+        &:after
+            position: absolute
+            top: 50%
+            right: 0
+            height: 128px
+            content: ''
+            background: rgba(106,123,255, .2)
+            transform: translateY(-50%)
+            +mq($small)
+                width: 1px
+
+        &:last-child
+            &:after
+                display: none
+
+    &__specs-item_info
+        position: relative
+        color: #ffffff
+        +mq($small)
+            padding-left: 0
+
+        &:after
+            position: absolute
+            z-index: -1
+            bottom: 0
+            right: -20px
+            width: 300%
+            height: 100%
+            content: ''
+            background-color: #6a7bff
+            +mq($small)
+                // right: -30px
+                right: 0
+
+        .resort__specs-title
+            color: #ffffff
+
+    // &__specs-item_weather
+    //     padding-left: 22px
+    //     padding-right: 20px
+
+    &__specs-item_lift,
+    &__specs-item_area
+
+        max-width: 50%
+        +mq($small)
+            max-width: 20%
+
+
+    &__specs-item_lift
+        padding-right: 25px
+        +mq($small)
+            padding-right: 32px
+
+        &:after
+            right: 15px
+            width: 1px
+            height: 88px
+            +mq($small)
+                right: 0
+                height: 128px
+
+    &__specs-item_area
+        padding-left: 25px
+        +mq($small)
+            padding-left: 32px
+
+    &__specs-item_pistes
+        padding-right: 0
+
+
+    &__specs-title
+        margin-bottom: 22px
+        color: #1f1f1f
+        font-size: 22px
+        font-weight: 700
+        letter-spacing: -0.44px
+        line-height: 1
+        text-transform: normal
+
+    &__stars
+        margin-right: 40px
+        margin-bottom: 20px
+        +mq($large)
+            margin-right: 0
+
+    &__cost
+        margin-bottom: 20px
+
+    &__status
+        width: 100%
+        +mq($large)
+            width: auto
+
+
+    &__weather
+        align-items: center
+        +mq($small)
+            display: block
+
+    &__weather-row
+        align-items: center
+        +mq($small)
+            margin-bottom: 20px
+        &:last-child
+            margin-left: auto
+            margin-bottom: 0
+            +mq($small)
+                margin-left: 0
+
+    &__weather-icon
+        margin-right: 14px
+    &__weather-now
+        // margin-right: 60px
+        color: #6a7bff
+        font-size: 20px
+        font-weight: 500
+        letter-spacing: -0.4px
+        +mq($small)
+            margin-right: 0
+
+    &__weather-col
+        margin-right: 14px
+        &:last-child
+            margin-right: 0
+
+    &__weather-middle,
+    &__weather-val
+        color: #1f1f1f
+        font-size: 16px
+        font-weight: 400
+        letter-spacing: -0.32px
+        line-height: 1
+
+    &__weather-middle
+        padding-right: 4px
+
+    &__weather-val
+        font-weight: 500
+
+    &__lift,
+    &__area
+        align-items: center
+    &__lift-icon,
+    &__area-icon
+        margin-right: 18px
+
+    &__lift-text,
+    &__area-text
+        color: #1f1f1f
+        font-size: 16px
+        font-weight: 500
+        letter-spacing: -0.32px
+        line-height: 1
+
+    &__pistes
+        flex-wrap: wrap
+
+    &__pistes-item
+        position: relative
+        margin-bottom: 20px
+        padding-left: 36px
+        // max-width: 100px
+        // max-width: 100%
+        max-width: 50%
+        width: 100%
+        color: #1f1f1f
+        font-size: 16px
+        font-weight: 500
+        letter-spacing: -0.32px
+        line-height: 1
+        +mq($small)
+            max-width: 50%
+
+        &:after
+            position: absolute
+            left: 0
+            top: 50%
+            content: ''
+            width: 24px
+            height: 6px
+            background: #0085ff
+            transform: translateY(-50%)
+        &:nth-child(2)
+            order: 2
+            // +mq($small)
+            &:after
+                background: #009432
+        &:nth-child(3)
+            order: 1
+            // +mq($small)
+            &:after
+                background: #1f1f1f
+        &:nth-child(4)
+            order: 3
+            &:after
+                background: #ff0000
+
+
+    &__know
+        padding-top: 24px
+        padding-bottom: 24px
+        order: 0
+        background-color: #1f1f1f
+        color: #FFF
+        +mq($small)
+            padding-top: 12px
+            padding-bottom: 12px
+            order: 1
+        .resort__container
+            flex-wrap: wrap
+            line-height: 1
+            +mq($small)
+                flex-wrap: nowrap
+
+
+    &__know-title
+        margin-bottom: 18px
+        margin-right: 9px
+        width: 100%
+        color: #ffffff
+        font-size: 14px
+        font-weight: 700
+        letter-spacing: -0.28px
+        text-align: left
+        line-height: 1
+        +mq($small)
+            margin-top: 2px
+            margin-bottom: 0
+            width: auto
+
+    &__know-list
+        flex-wrap: wrap
+
+    &__know-item
+        margin-bottom: 20px
+        display: flex
+        flex-basis: 50%
+        align-items: center
+        font-size: 14px
+        font-weight: 500
+        letter-spacing: -0.28px
+        line-height: 1
+        +mq($medium)
+            margin-right: 20px
+            margin-bottom: 0
+            flex-basis: auto
+        &:last-child
+            margin-right: 0
+
+    &__know-icon
+        margin-right: 10px
+        flex-shrink: 0
+
+    &__row
+        padding-top: ($pm / 2)
+        padding-bottom: ($pm / 2)
+        flex-wrap: wrap
+        +mq($small)
+            padding-top: $pm
+            padding-bottom: $pm
+
+    &__sidebar
+        display: none
+        +mq($small)
+            display: block

@@ -1,0 +1,15 @@
+include ../breadcrumbs/breadcrumbs.pug
+include ../content/content.pug
+include ../sidebar/sidebar.pug
+
+mixin article(data)
+    .article&attributes(attributes)
+        .article__top
+            .article__image
+                img(src="assets/images/content/article-top-img.jpg", alt="")
+
+        .article__row.container.flex
+
+            +content-article().article__content
+            +sidebar-article().article__sidebar
+
