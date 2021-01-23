@@ -1,54 +1,36 @@
 .breadcrumbs
-  span > span
-    .breadcrumbs_sep
-      top: 1px
-
   &__list,
-  span > span,
-  span > span > span
+  span > span
     display: flex
-    // flex-wrap: wrap
     align-items: center
-    line-height: 1
-
-
 
   &__item,
   span > span > a,
   span > span > span
-    line-height: 1
     &:last-child,
     .breadcrumbs__link,
     .breadcrumb_last
-      padding-right: 0
-      display: initial
-      text-overflow: ellipsis
-      overflow: hidden
       &:after
         display: none
-    &:first-child
-      display: inline-block
-      overflow: initial
-      text-overflow: initial
 
   &__link,
   span > span > a,
   span > span > span
+    position: relative
+    padding-right: 20px
     color: #1f1f1f
     font-size: 12px
     font-weight: 500
     letter-spacing: -0.24px
     line-height: 1
     text-decoration: none
-    white-space: nowrap
-    text-overflow: ellipsis
-    overflow: hidden
-    .breadcrumbs__sep
-      top: -1px
-
-  &__sep
-    position: relative
-    top: 0
-    +margin-right(10px)
-    +margin-left(10px)
-    line-height: 1
+    &:after
+      position: absolute
+      top: calc(50% + 1px)
+      right: 11px
+      width: 3px
+      height: 5px
+      content: ''
+      background: url(../images/general/breadcrumb-arrow.svg) 50% no-repeat
+      background-size: cover
+      transform: translateY(-50%)

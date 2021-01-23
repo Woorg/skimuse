@@ -1,13 +1,8 @@
 .sidebar
     width: 100%
-    display: none
     +mq($small)
+        padding-right: 70px
         max-width: 33.3%
-        display: block
-    +mq($medium)
-        // padding-right: 70px
-        +padding-right(70px)
-
     &__slider
         position: relative
         // width: 302px
@@ -95,6 +90,7 @@
             padding-right: 15px
             padding-bottom: 15px
             padding-left: 38px
+            align-items: center
             text-decoration: none
             color: #1f1f1f
             font-size: 14px
@@ -103,8 +99,7 @@
             line-height: 1.333
 
         .sidebar__item-icon
-            top: -2px
-            // top: 0
+            top: 2px
             transform: translateY(0)
         .sidebar__block-title
             margin-bottom: 17px
@@ -150,9 +145,3 @@
         letter-spacing: -0.32px
         line-height: 1
 
-
-.sidebar_mob
-    margin-top: 56px
-    display: block
-    +mq($small)
-        display: none
