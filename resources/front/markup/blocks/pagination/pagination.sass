@@ -1,32 +1,84 @@
 .pagination
+  border-top: 2px solid #000
   margin-top: 20px
+  padding-top: 24px
+
+  .navigation
+    width: 100%
+
 
   .screen-reader-text
     +visuallyhidden
 
   .nav-links
+    position: relative
+    width: 100%
     display: flex
+    justify-content: center
+    align-items: center
 
   .page-numbers
-    margin-right: 5px
-    margin-left: 5px
+    border: solid 2px transparent
+    // margin-right: 5px
+    // margin-left: 5px
+    width: 32px
+    height: 32px
+    display: flex
+    flex-shrink: 0
+    align-items: center
+    justify-content: center
+
     color: #1f1f1f
-    font-size: 22px
+
+    font-size: 13px
     font-weight: 500
     letter-spacing: -0.44px
-    line-height: normal
+    line-height: 1
     text-decoration: none
-    +tr(.3s linear)
+    border-radius: 50%
+    +tr(.3s ease-out)
+    &:hover
+      border: solid 2px #6a7bff
+      +tr(.3s ease-out)
+
+    &.next,
+    &.prev
+      position: absolute
+      top: 50%
+      border: none
+      font-size: 0
+      transform: translateY(-50%)
+      +mq($small)
+        width: auto
+        height: auto
+        font-size: 13px
+      .pagination__icon
+        width: 16px
+        height: 16px
+        +mq($small)
+          width: 22px
+          height: 22px
+
 
     &.next
-      padding-left: 10px
+      right: 0
+      margin-left: 117px
+      .pagination__icon
+        margin-left: 14px
+        transform: rotate(180deg)
 
     &.prev
-      padding-right: 10px
+      left: 0
+      margin-right: 117px
+      .pagination__icon
+        margin-right: 14px
 
-
-    &:hover,
     &.current
+      border: solid 2px #000
+      color: #000
+
+
+    &:hover
       color: #6a7bff
       +tr(.3s linear)
 

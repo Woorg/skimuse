@@ -34,13 +34,20 @@
     &:last-child
       margin-right: 0
 
+    &:hover
+      .blog-slider__button-icon
+        color: $purple
+        +tr(.3s ease-out)
+
   &__button_prev
     transform: rotate(-180deg)
 
   &__button_next
     transform: translateY(4px) rotate(0deg)
 
-  // &__button-icon
+  &__button-icon
+    color: #2E3A59
+    +tr(.3s ease-out)
 
   &__slider
     margin-right: -20px
